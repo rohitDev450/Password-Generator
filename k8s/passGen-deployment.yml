@@ -1,0 +1,19 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: passgen
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: passgen
+  template:
+    metadata:
+      labels:
+        app: passgen
+    spec:
+      containers:
+      - name: passgen
+        image: rohitar/password-generator:6
+        ports:
+        - containerPort: 80
