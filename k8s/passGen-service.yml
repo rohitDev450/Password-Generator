@@ -5,9 +5,9 @@ metadata:
 spec:
   selector:
     app: passgen
-  type: NodePort  # or NodePort if no LB available
+  type: NodePort 
   ports:
     - protocol: TCP
-      port: 80         # service port
-      targetPort: 80   # container port
+      port: 80        
+      targetPort: 80   
       nodePort: 30080
