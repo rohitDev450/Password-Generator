@@ -35,8 +35,8 @@ pipeline {
         stage('Code Deploy') {
             steps {
                   sh """
-                   kubectl apply -f ${WORKSPACE}/k8s/passGen-deployment.yaml
-                   kubectl apply -f ${WORKSPACE}/k8s/passgen-service.yaml
+                   kubectl apply -f ${WORKSPACE}/k8s/passGen-deployment.yml
+                   kubectl apply -f ${WORKSPACE}/k8s/passgen-service.yml
                     """
             }
           }
